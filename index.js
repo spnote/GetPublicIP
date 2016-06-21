@@ -14,8 +14,10 @@ server = http.createServer(
 
     // Start the response
     res.writeHead(200, {'Content-type': 'text/plain'});
-    res.write(ip_address + "\n");
-    console.log(ip_address);
+    //res.write(ip_address + "\n");
+    var outputFormat = "function ip() { return \"" + ip_address + "\" };"
+    res.write(outputFormat);
+    //console.log(ip_address);
     
     /*
     // Lookup the PTR of the client IP and add to the response
