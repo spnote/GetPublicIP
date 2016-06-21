@@ -17,6 +17,7 @@ server = http.createServer(
     res.write(ip_address + "\n");
     console.log(ip_address);
     
+    /*
     // Lookup the PTR of the client IP and add to the response
     // This will throw an exception if we don't pass in a valid IP
     try {
@@ -35,6 +36,7 @@ server = http.createServer(
       console.log('Exception from dns.reverse: (' + e.name + '): ' + e.message);
       res.end("DNS failed\n");
     }
+    */
   }
 );
 
